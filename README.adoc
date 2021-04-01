@@ -16,5 +16,14 @@ docker run -rm -v {LicenseFile}:/opt/yourkit/license-server/licenses/{LicenseFil
 [source, yaml]
 .docker-compose.yml
 -----
+version: '3'
+services:
+  license_server:
+    image: sczuka/yourkit-license-server
+    restart: unless-stopped
+    volumes:
+      - "/srv/yourkit-license-server/licenses:/opt/yourkit/license-server/licenses"
+    ports:
+      - 10112:10112
 -----
 
