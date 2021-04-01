@@ -1,0 +1,17 @@
+= YourKit License Server
+Docker container
+
+== Introduction
+
+Thie repository provides the YourKit License Server through a docker container.
+
+== Usage
+
+.docker command line
+[source, sh]
+-----
+docker run -v {LicenseFile}:/opt/yourkit/license-server/licenses/{LicenseFile} -p 10112:10112 sczuka/yourkit-license-server
+-----
+
+.docker-compose.yml
+
