@@ -10,6 +10,8 @@ RUN apk --no-cache add curl unzip && \
   rm -f /tmp/yourkit-license-server.zip && \
   apk --no-cache del curl unzip
   
- VOLUME ["${LICENSE_SERVER_LOCATION}/licenses"]
+EXPOSE 10112
   
- ENTRYPOINT [ "${LICENSE_SERVER_LOCATION}/bin/startup.sh" ]
+VOLUME ["${LICENSE_SERVER_LOCATION}/licenses"]
+  
+ENTRYPOINT [ "${LICENSE_SERVER_LOCATION}/bin/startup.sh" ]
