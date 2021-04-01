@@ -12,5 +12,7 @@ RUN apk --no-cache add curl unzip && \
 EXPOSE 10112
   
 VOLUME ["/opt/yourkit/yourkit-license-server/licenses"]
-  
+
+WORKDIR /opt/yourkit/yourkit-license-server/bin/
+
 ENTRYPOINT [ "/opt/yourkit/yourkit-license-server/bin/startup.sh" ]
