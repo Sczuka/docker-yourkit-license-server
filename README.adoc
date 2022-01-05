@@ -10,7 +10,7 @@ Thie repository provides the YourKit License Server through a docker container.
 .docker command line
 [source, sh]
 -----
-docker run -rm -v {LicenseFile}:/opt/yourkit/license-server/licenses/{LicenseFile} -p 10112:10112 sczuka/yourkit-license-server
+docker run -rm -v {LicenseFolder}:/opt/yourkit/license-server/licenses/ -p 10112:10112 sczuka/yourkit-license-server
 -----
 
 [source, yaml]
